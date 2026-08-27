@@ -1,0 +1,28 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Modern smart home setup with sleek gadgets",
+      "imageUrl": "https://picsum.photos/seed/hallha-hero/1200/600",
+      "imageHint": "smart gadgets technology"
+    },
+    {
+      "id": "product-1",
+      "description": "Smart cable organizer for messy desks",
+      "imageUrl": "https://picsum.photos/seed/product1/600/400",
+      "imageHint": "cable organizer"
+    },
+    {
+      "id": "product-2",
+      "description": "Compact ergonomic laptop stand",
+      "imageUrl": "https://picsum.photos/seed/product2/600/400",
+      "imageHint": "laptop stand"
+    },
+    {
+      "id": "product-3",
+      "description": "Portable magnetic power bank",
+      "imageUrl": "https://picsum.photos/seed/product3/600/400",
+      "imageHint": "power bank"
+    }
+  ]
+}

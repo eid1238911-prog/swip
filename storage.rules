@@ -1,0 +1,25 @@
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // وظيفة للتحقق من صلاحية المدير بشكل قوي
+    function isAdmin() {
+      return request.auth != null && 
+        firestore.exists(/databases/(default)/documents/users/$(request.auth.uid)) &&
+        firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+
+    // قواعد صور المنتجات (Products)
+    match /products/{allPaths=**} {
+      // السماح للجميع بمشاهدة صور المنتجات
+      allow read: if true;
+      // السماح للمسؤول فقط برفع صور جديدة أو تعديلها أو حذفها
+      allow write, delete: if isAdmin();
+    }
+    
+    // منع الوصول العشوائي لأي ملفات أخرى
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

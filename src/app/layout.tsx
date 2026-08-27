@@ -36,6 +36,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
+        <title>JocMart | متجر الحلول والمنتجات الذكية</title>
+        <meta name="description" content="متجر متخصص في توفير منتجات إبداعية وذكية تحل التحديات اليومية بأسلوب عصري وأنيق." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
